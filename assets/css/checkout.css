@@ -1,0 +1,267 @@
+/**
+ * FE WooCommerce Checkout Styles
+ *
+ * Styles for factura electrónica checkout fields
+ *
+ * @package FE_Woo
+ */
+
+/* Factura Electrónica Section - High specificity for theme compatibility */
+#fe_woo_factura_fields.fe-woo-factura-section {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+    clear: both;
+    width: 100%;
+    box-sizing: border-box;
+    display: block !important; /* Ensure visibility across themes */
+}
+
+/* Hide optional label from factura fields */
+.fe-woo-factura-section .optional,
+.fe-woo-factura-details .optional {
+    display: none !important;
+}
+
+.fe-woo-factura-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+    border-bottom: 2px solid #007cba;
+    padding-bottom: 10px;
+}
+
+/* Checkbox styling */
+.fe-woo-factura-checkbox label {
+    font-weight: 600;
+    font-size: 1.05em;
+}
+
+/* Factura details container */
+.fe-woo-factura-details {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+/* Field styling - Use WooCommerce standard form-row */
+.fe-woo-factura-section .form-row {
+    margin: 0 0 15px;
+    clear: both;
+}
+
+.fe-woo-factura-section .form-row-wide {
+    width: 100%;
+}
+
+.fe-woo-field {
+    margin-bottom: 15px;
+}
+
+/* Bloque de ayuda estático bajo un campo (reemplaza al tooltip
+   .description que WC posiciona absoluto y rompe visualmente). */
+.fe-woo-field-help {
+    margin: -8px 0 15px;
+    padding: 0;
+    color: #666;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: normal;
+    background: transparent;
+    border: 0;
+}
+
+.fe-woo-field label,
+.fe-woo-factura-section .form-row label {
+    font-weight: 500;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.fe-woo-field input,
+.fe-woo-field select,
+.fe-woo-factura-section .form-row input,
+.fe-woo-factura-section .form-row select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.fe-woo-field input:focus,
+.fe-woo-field select:focus,
+.fe-woo-factura-section .form-row input:focus,
+.fe-woo-factura-section .form-row select:focus {
+    border-color: #007cba;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 124, 186, 0.2);
+}
+
+/* Error state */
+.fe-woo-field.woocommerce-invalid input,
+.fe-woo-field.woocommerce-invalid select,
+.fe-woo-factura-section .form-row.woocommerce-invalid input,
+.fe-woo-factura-section .form-row.woocommerce-invalid select {
+    border-color: #e2401c;
+}
+
+/* Error message */
+.fe-woo-error-message {
+    color: #e2401c;
+    font-size: 0.875em;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Required field indicator */
+.fe-woo-factura-details .form-row.validate-required label abbr.required {
+    color: #e2401c;
+    text-decoration: none;
+}
+
+/* Select dropdown */
+.fe-woo-field select {
+    cursor: pointer;
+    background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%23333" d="M6 9L1 4h10z"/></svg>') no-repeat right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+    appearance: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .fe-woo-factura-section {
+        padding: 15px;
+    }
+
+    .fe-woo-factura-details {
+        padding: 15px;
+    }
+
+    .fe-woo-field input,
+    .fe-woo-field select {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+}
+
+/* Fila cedula + botón de carga */
+.fe-woo-cedular-row {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.fe-woo-cedular-row .input-wrapper {
+    flex: 1;
+    min-width: 0;
+}
+
+.fe-woo-cedular-row input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Botón Cargar */
+#fe_woo_load_factura {
+    background-color: #007cba;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+#fe_woo_load_factura:hover:not(:disabled) {
+    background-color: #005f8a;
+}
+
+#fe_woo_load_factura:disabled {
+    background-color: #8bb5d0;
+    cursor: not-allowed;
+}
+
+/* Mensaje de estado de carga */
+.fe-woo-load-status {
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    font-size: 0.875em;
+    line-height: 1.5;
+    border-left: 4px solid transparent;
+}
+
+.fe-woo-load-status.status-db {
+    background-color: #eafaf1;
+    border-left-color: #2a9d5c;
+    color: #1a6b3c;
+}
+
+.fe-woo-load-status.status-api {
+    background-color: #e7f3ff;
+    border-left-color: #007cba;
+    color: #005f8a;
+}
+
+.fe-woo-load-status.status-not-found {
+    background-color: #fff8e1;
+    border-left-color: #e6a817;
+    color: #7a5a00;
+}
+
+.fe-woo-load-status.status-error {
+    background-color: #fef2f0;
+    border-left-color: #e2401c;
+    color: #c0392b;
+}
+
+/* Responsive: botón bajo el campo en pantallas pequeñas */
+@media (max-width: 480px) {
+    .fe-woo-cedular-row {
+        flex-direction: column;
+    }
+
+    #fe_woo_load_factura {
+        width: 100%;
+    }
+}
+
+/* Admin order display */
+.fe-woo-order-factura-data {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.fe-woo-order-factura-data h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #007cba;
+    padding-bottom: 8px;
+}
+
+.fe-woo-order-factura-data p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.fe-woo-order-factura-data strong {
+    color: #555;
+    font-weight: 600;
+}

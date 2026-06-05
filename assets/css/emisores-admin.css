@@ -1,0 +1,250 @@
+/**
+ * Emisores Admin Styles
+ *
+ * @package FE_Woo
+ */
+
+.fe-woo-emisores-page {
+    max-width: 1400px;
+}
+
+.fe-woo-emisores-header {
+    margin: 20px 0;
+}
+
+.fe-woo-emisores-header .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.fe-woo-emisores-table {
+    margin-top: 20px;
+}
+
+.fe-woo-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.fe-woo-badge-parent {
+    background: #ffc107;
+    color: #fff;
+}
+
+.fe-woo-badge-child {
+    background: #2196f3;
+    color: #fff;
+}
+
+.fe-woo-badge .dashicons {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+}
+
+.fe-woo-status {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.fe-woo-status-active {
+    background: #e7f7ed;
+    color: #1e8449;
+}
+
+.fe-woo-status-inactive {
+    background: #fdecea;
+    color: #c0392b;
+}
+
+/* Modal Styles */
+.fe-woo-modal {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fe-woo-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fe-woo-modal-content {
+    background-color: #fff;
+    margin: auto;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.fe-woo-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid #ddd;
+}
+
+.fe-woo-modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.fe-woo-modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+
+.fe-woo-modal-close:hover,
+.fe-woo-modal-close:focus {
+    color: #000;
+    background: #f0f0f0;
+}
+
+.fe-woo-modal-body {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* Form Styles */
+.fe-woo-emisor-form {
+    max-width: 100%;
+}
+
+.fe-woo-form-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.fe-woo-form-section:last-of-type {
+    border-bottom: none;
+}
+
+.fe-woo-form-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #23282d;
+}
+
+.fe-woo-form-row {
+    margin-bottom: 15px;
+}
+
+.fe-woo-form-row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.fe-woo-form-row input[type="text"],
+.fe-woo-form-row input[type="email"],
+.fe-woo-form-row input[type="password"],
+.fe-woo-form-row textarea {
+    width: 100%;
+    max-width: 100%;
+}
+
+.fe-woo-form-row .description {
+    margin-top: 5px;
+    font-style: italic;
+    color: #666;
+}
+
+.fe-woo-form-row .required {
+    color: #dc3232;
+}
+
+.fe-woo-form-row-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.fe-woo-form-row-quarter {
+    flex: 1;
+    min-width: 150px;
+}
+
+.fe-woo-form-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Loading State */
+.fe-woo-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.fe-woo-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #2196f3;
+    border-radius: 50%;
+    animation: fe-woo-spin 1s linear infinite;
+}
+
+@keyframes fe-woo-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fe-woo-modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .fe-woo-form-row-group {
+        flex-direction: column;
+    }
+
+    .fe-woo-form-row-quarter {
+        min-width: 100%;
+    }
+}

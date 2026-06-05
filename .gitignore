@@ -1,0 +1,14 @@
+# PHPUnit cache.
+.phpunit.result.cache
+
+# Dev-only Composer packages — committed vendor/ should only contain
+# require deps (tcpdf, dompdf, xmlseclibs) for runtime. Run
+# `composer install` locally when you need PHPUnit.
+vendor/phpunit/
+vendor/myclabs/
+vendor/doctrine/
+vendor/nikic/
+vendor/phar-io/
+vendor/sebastian/
+vendor/theseer/
+vendor/bin/

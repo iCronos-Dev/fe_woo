@@ -1,0 +1,75 @@
+/**
+ * FE WooCommerce — CABYS picker styles for the product editor.
+ */
+
+.fe-woo-product-cabys .fe-woo-cabys-results {
+    max-height: 240px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0 12px 12px 162px;
+    background: #fff;
+}
+
+.fe-woo-product-cabys .fe-woo-cabys-results:empty {
+    display: none;
+}
+
+.fe-woo-product-cabys .fe-woo-cabys-result {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 12px;
+    align-items: baseline;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.fe-woo-product-cabys .fe-woo-cabys-result:last-child {
+    border-bottom: none;
+}
+
+.fe-woo-product-cabys .fe-woo-cabys-result:hover {
+    background: #f6f7f7;
+}
+
+.fe-woo-product-cabys .fe-woo-cabys-result-code {
+    font-family: monospace;
+    color: #2271b1;
+    font-weight: 600;
+}
+
+.fe-woo-product-cabys .fe-woo-cabys-result-description {
+    color: #1d2327;
+}
+
+.fe-woo-product-cabys .fe-woo-cabys-no-results,
+.fe-woo-product-cabys .fe-woo-cabys-error {
+    padding: 12px;
+    color: #50575e;
+    font-style: italic;
+}
+
+.fe-woo-product-cabys .fe-woo-cabys-error {
+    color: #b32d2e;
+    font-style: normal;
+}
+
+.fe-woo-product-cabys .fe-woo-cabys-hint {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #50575e;
+    font-style: italic;
+}
+
+.fe-woo-product-cabys .fe-woo-cabys-spinner.is-active {
+    display: inline-block;
+    visibility: visible;
+    float: none;
+    margin: 0 0 0 6px;
+}
+
+.fe-woo-product-cabys .fe-woo-cabys-description-input[readonly] {
+    background-color: #f6f7f7;
+    color: #50575e;
+}

@@ -1,0 +1,27 @@
+/**
+ * Product Emisor Field Styles
+ *
+ * @package FE_Woo
+ */
+
+.fe-woo-product-emisor-field {
+    border-top: 1px solid #eee;
+    padding-top: 12px !important;
+    margin-top: 12px !important;
+}
+
+.fe-woo-emisor-info {
+    background: #f8f9fa;
+    padding: 10px 12px !important;
+    border-left: 3px solid #2196f3;
+    margin-left: 0 !important;
+}
+
+.fe-woo-emisor-info .description {
+    display: block;
+    line-height: 1.6;
+}
+
+.fe-woo-emisor-info strong {
+    color: #23282d;
+}
