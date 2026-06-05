@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Factura Electronica Para WooCommerce
- * Plugin URI: https://example.com
- * Description: Connecta las ordenes de Woo con Factura Electronica Costa Rica
+ * Plugin URI: https://icronos.dev
+ * Description: Conecta las órdenes de WooCommerce con Factura Electrónica Costa Rica (Hacienda). Autor original: Jason Acuña. Mantenido por icronos.dev.
  * Version: 1.33.0
- * Author: Jason Acuna
- * Author URI: https://example.com
+ * Author: icronos.dev
+ * Author URI: https://icronos.dev
  * Text Domain: fe-woo
  * Domain Path: /languages
  * Requires at least: 5.8

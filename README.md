@@ -1,3 +1,12 @@
+<p align="center">
+  <a href="https://icronos.dev">
+    <img src="assets/img/icronos.svg" alt="icronos.dev" width="56" height="60">
+  </a>
+</p>
+<p align="center">
+  Desarrollado y mantenido por <a href="https://icronos.dev"><strong>icronos.dev</strong></a>
+</p>
+
 # FE WooCommerce - Hacienda Integration
 
 WordPress plugin for integrating WooCommerce with Costa Rica's Ministerio de Hacienda electronic invoicing system (Facturación Electrónica).
@@ -329,3 +338,19 @@ composer update fe-woo/hacienda-integration --with-dependencies
 ## Credits
 
 Developed for integration with Costa Rica's Ministerio de Hacienda electronic invoicing system (ATV).
+
+Autor original: **Jason Acuña**.
+
+### Mantenimiento y soporte
+
+<a href="https://icronos.dev"><img src="assets/img/icronos.svg" alt="icronos.dev" width="40" height="43" align="left"></a>
+
+Este plugin es mantenido por **[icronos.dev](https://icronos.dev)**.
+
+¿Necesitás implementación, soporte o personalización de Factura Electrónica para tu tienda WooCommerce? Escribinos en **[icronos.dev](https://icronos.dev)**.
+
+---
+
+<p align="center">
+  <sub>Mantenido por <a href="https://icronos.dev">icronos.dev</a></sub>
+</p>
